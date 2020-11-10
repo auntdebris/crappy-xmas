@@ -1,15 +1,23 @@
 import React from "react";
-import KuulaHolder from "./components/KuulaHolder";
-import ZoomMeeting from "./components/ZoomMeeting";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import Home from "./pages/Home";
+import Meeting from "./pages/Meeting";
 
 function App() {
-
   return (
-    <div className="App">
-      <ZoomMeeting />
-      <KuulaHolder />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/zoom-meeting" component={Meeting} />
+      </Switch>
+    </Router>
   );
 }
+
 
 export default App;

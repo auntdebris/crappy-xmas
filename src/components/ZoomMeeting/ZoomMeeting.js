@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { ZoomMtg } from "@zoomus/websdk";
+import './ZoomMeeting.css';
 
 let apiKeys = {
     apiKey: process.env.REACT_APP_ZOOM_API_KEY,
@@ -9,15 +10,16 @@ let apiKeys = {
 let meetConfig = {
     apiKey: apiKeys.apiKey,
     leaveUrl: "https://zoom.us/",
-    meetingNumber: "97140819337",
+    meetingNumber: "93422351000",
     userName: "Example",
     userEmail: "example@example.com",
     passWord: "0hZeCd",
     role: 0,
 };
 
-function ZoomMeeting() {
-    function joinMeeting(signature, meetConfig) {
+const ZoomMeeting = () => {
+
+    const joinMeeting = (signature, meetConfig, userName) => {
         ZoomMtg.init({
             leaveUrl: meetConfig.leaveUrl,
             isSupportAV: true,
@@ -25,7 +27,7 @@ function ZoomMeeting() {
                 console.log("Init Success ", success);
                 ZoomMtg.join({
                     meetingNumber: meetConfig.meetingNumber,
-                    userName: meetConfig.userName,
+                    userName: userName,
                     signature: signature,
                     apiKey: meetConfig.apiKey,
                     passWord: meetConfig.passWord,
@@ -41,7 +43,8 @@ function ZoomMeeting() {
             },
         });
     }
-    useEffect(() => {
+
+    const initialiseZoom = (userName) => {
         ZoomMtg.setZoomJSLib("https://source.zoom.us/1.8.1/lib", "/av");
         ZoomMtg.preLoadWasm();
         ZoomMtg.prepareJssdk();
@@ -55,13 +58,35 @@ function ZoomMeeting() {
                 console.log("res", res);
 
                 setTimeout(() => {
-                    joinMeeting(res.result, meetConfig);
+                    joinMeeting(res.result, meetConfig, userName);
+
+                    document.getElementById('zmmtg-root').style.display = 'block';
                 }, 1000);
             },
         });
+    }
+
+    const onFormSubmit = (e) => {
+        const userName = document.getElementById('userName').value;
+
+        e.preventDefault();
+        initialiseZoom(userName);
+    }
+
+    useEffect(() => {
+        document.getElementById('userName').focus();
     }, []);
 
-    return <div className="ZoomMeeting">Zoom Testing</div>;
+    return (
+        <div className="ZoomMeeting">
+            <form onSubmit={onFormSubmit}>
+                <h4>Enter your name</h4>
+                <input id="userName" name="userName" type="text" autocomplete="off"
+                    required />
+                <button>Start meeting</button>
+            </form>
+        </div>
+    );
 }
 
 export default ZoomMeeting;
