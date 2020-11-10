@@ -10,7 +10,7 @@ let apiKeys = {
 let meetConfig = {
     apiKey: apiKeys.apiKey,
     leaveUrl: "https://zoom.us/",
-    meetingNumber: "93422351000",
+    meetingNumber: "94800471949",
     userName: "Example",
     userEmail: "example@example.com",
     passWord: "0hZeCd",
