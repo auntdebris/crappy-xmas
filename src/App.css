@@ -1,33 +1,47 @@
-body {
-    font-family: 'Crimson Text', serif;
+html, body {
+    overflow: visible !important;
+    min-width: 0 !important;
+    font-size: 16px !important;
 }
 
-button,
-.button {
+body .app {
+    font-family: 'Crimson Text', serif !important;
+}
+
+.app input {
+    font-family: 'Crimson Text', serif !important;
+}
+
+.app button,
+.app .button {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.777778px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.app button:not(.-plain),
+.app .button:not(.-plain) {
     display: inline-block;
     appearance: none;
     border: 0;
     border-radius: 22px;
-    padding: 10px 50px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 400;
+    padding: 10px 50px !important;
     line-height: 1.7em;
-    letter-spacing: 0.777778px;
-    text-decoration: none;
-    background: #F9F5F1;
-    cursor: pointer;
+    background: #F9F5F1 !important;
 }
 
-button:focus,
-.button:focus {
+.app button:focus,
+.app .button:focus {
     outline: none;
 }
 
-button.-red,
-.button.-red {
-    background: #CB343E;
-    color: #F9F5F1;
+.app button:not(.-plain).-red,
+.app .button:not(.-plain).-red {
+    background: #CB343E !important;
+    color: #F9F5F1 !important;
 }
 
 .-fullbleed {
@@ -42,18 +56,22 @@ button.-red,
     justify-content: center;
 }
 
-h2 {
+.app h2 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.125rem;
     font-weight: 200;
 }
 
-p.-large {
+.app p.-large {
     font-size: 1.5rem;
 }
 
+body .app  input[type=text] {
+    outline: none !important;
+}
+
 @media only screen and (min-width: 980px) {
-    p.-large {
+    .app p.-large {
         font-size: 1.875rem;
     }
 }

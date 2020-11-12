@@ -7,14 +7,17 @@ import './Zoom.css';
 
 const Zoom = ({ isOpen, setOpen }) => {
     const containerClass = classnames('Zoom', {
-        open: isOpen
+        '-open': isOpen
     });
 
     return (
-        <div className={containerClass}>
-            {isOpen && <iframe title="zoom" src="//ps-xmas-zoom.netlify.app"></iframe>}
-            <button onClick={() => setOpen(false)}>Close X</button>
-        </div>
+        <>
+            <div className={`Zoom__overlay ${isOpen ? '-open' : ''}`} />
+            <div className={containerClass}>
+                {isOpen && <iframe title="zoom" src="/zoom-meeting"></iframe>}
+                <button className="-plain" onClick={() => setOpen(false)}>Close ✕</button>
+            </div>
+        </>
     );
 }
 

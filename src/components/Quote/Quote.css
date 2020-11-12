@@ -2,7 +2,7 @@
     flex-direction: column;
     color: white;
     background: #21554D;
-    background-size: 357px 332px;
+    background-size: 178px 166px;
     background-repeat: no-repeat;
     background-position: bottom left;
 }
@@ -16,4 +16,10 @@
     width: 70%;
     max-width: 560px;
     text-align: center;
+}
+
+@media only screen and (min-width: 980px) {
+    .Quote {
+        background-size: 357px 332px;
+    }
 }
