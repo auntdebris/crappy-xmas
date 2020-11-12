@@ -1,4 +1,4 @@
-.ZoomMeetingHolder {
+.Zoom {
     position: fixed;
     width: 95%;
     height: 90%;
@@ -19,13 +19,13 @@
                 transform 250ms ease-in-out;
 }
 
-.ZoomMeetingHolder.open {
+.Zoom.open {
     visibility: visible;
     opacity: 1;
     transform: scale(1);
 }
 
-.ZoomMeetingHolder iframe {
+.Zoom iframe {
     position: absolute;
     width: 100%;
     height: calc(100% - 30px);
@@ -33,10 +33,11 @@
     border: 0;
 }
 
-.ZoomMeetingHolder button {
+.Zoom button {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 3px 10px;
+    padding: 4px 10px;
     color: white;
+    background: none;
 }

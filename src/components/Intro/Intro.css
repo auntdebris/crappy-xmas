@@ -1,0 +1,11 @@
+.Intro {
+    background: #CB343E;
+    color: white;
+    flex-direction: column;
+}
+
+.Intro__content {
+    width: 70%;
+    max-width: 800px;
+    text-align: center;
+}
