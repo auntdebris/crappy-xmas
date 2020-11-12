@@ -18,7 +18,13 @@
     text-align: center;
 }
 
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 600px) and (min-height: 500px) {
+    .Quote {
+        background-size: 268px 249px;
+    }
+}
+
+@media only screen and (min-width: 800px) and (min-height: 500px) {
     .Quote {
         background-size: 357px 332px;
     }
