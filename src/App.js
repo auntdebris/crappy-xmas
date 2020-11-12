@@ -4,16 +4,15 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import './App.css';
 
 import Home from "./pages/Home";
-import Meeting from "./pages/Meeting";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/zoom-meeting" component={Meeting} />
       </Switch>
     </Router>
   );

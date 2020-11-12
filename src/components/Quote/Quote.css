@@ -1,0 +1,19 @@
+.Quote {
+    flex-direction: column;
+    color: white;
+    background: #21554D;
+    background-size: 357px 332px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+.Quote img {
+    width: 90%;
+    max-width: 1130px;
+}
+
+.Quote p {
+    width: 70%;
+    max-width: 560px;
+    text-align: center;
+}

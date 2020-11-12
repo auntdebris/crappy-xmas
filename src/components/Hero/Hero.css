@@ -1,0 +1,12 @@
+.Hero {
+    background: #CB343E;
+    color: white;
+    flex-direction: column;
+}
+
+.Hero img {
+    position: relative;
+    width: 90%;
+    max-width: 1130px;
+    left: 7%;
+}
