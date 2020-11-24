@@ -1,0 +1,15 @@
+.Intro {
+    flex-direction: column;
+    min-height: 70vh;
+    padding: 0 0 80px;
+    
+    @media only screen and (min-width: 600px) {
+        padding: 0 0 120px;
+    }
+}
+
+.Intro__content {
+    width: 70%;
+    max-width: 1000px;
+    text-align: center;
+}

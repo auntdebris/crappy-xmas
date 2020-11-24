@@ -1,10 +1,9 @@
 import React from "react";
+import './Home.scss';
 import Hero from "../../components/Hero";
 import Intro from "../../components/Intro";
 import Charities from "../../components/Charities/Charities";
-import Quote from "../../components/Quote";
-import Party from "../../components/Party";
-import './Home.css';
+import Party from "../../components/Party/Party";
 
 const Home = () => {
     return (
@@ -12,7 +11,6 @@ const Home = () => {
             <Hero />
             <Intro />
             <Charities />
-            <Quote />
             <Party />
         </div>
     )
