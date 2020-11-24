@@ -1,90 +1,94 @@
-html, body {
-    overflow: visible !important;
-    min-width: 0 !important;
-    font-size: 16px !important;
+html,
+body {
+  overflow: visible !important;
+  min-width: 0 !important;
+  font-size: 16px !important;
 }
 
 body .app {
-    font-family: 'futura-pt', serif !important;
+  font-family: "futura-pt", serif !important;
 }
 
 input {
-    font-family: 'futura-pt', serif !important;
+  font-family: "futura-pt", serif !important;
 }
 
 button,
 .button {
-    font-family: 'futura-pt', sans-serif;
-    font-size: 0.875rem;
-    font-weight: 400;
-    letter-spacing: 0.777778px;
-    text-decoration: none;
-    cursor: pointer;
-    
-    &:not(.-plain) {
-        display: inline-block;
-        appearance: none;
-        border: 0;
-        border-radius: 22px;
-        padding: 10px 50px !important;
-        line-height: 1.7em;
-        background: #F9F5F1 !important;
+  font-family: "futura-pt", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.777778px;
+  text-decoration: none;
+  cursor: pointer;
 
-        &.-red {
-            background: #CB343E !important;
-            color: #F9F5F1 !important;
-        }
+  &:not(.-plain) {
+    display: inline-block;
+    appearance: none;
+    border: 0;
+    border-radius: 22px;
+    padding: 10px 50px !important;
+    line-height: 1.7em;
+    background: #f9f5f1 !important;
+
+    &.-red {
+      background: #cb343e !important;
+      color: #f9f5f1 !important;
     }
-    
-    &:focus {
-        outline: none;
-    }
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .-fullbleed {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .-centerContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.-visuallyHidden { 
-    position: absolute; 
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    height: 1px; width: 1px; 
-    margin: -1px; padding: 0; border: 0; 
+.-visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 h2 {
-    font-family: futura-pt, sans-serif;
-    font-size: 1.3rem;
-    font-weight: 400;
-    
-    @media only screen and (min-width: 600px) {
-        font-size: 1.7rem;
-    }
+  font-family: futura-pt, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+
+  @media only screen and (min-width: 600px) {
+    font-size: 1.7rem;
+  }
 }
 
 p {
-    &.-large {
-        font-size: 1.25rem;
+  &.-large {
+    font-size: 1.25rem;
 
-        @media only screen and (min-width: 600px) {
-            font-size: 1.75rem;
-        }
-
-        @media only screen and (min-width: 1200px) {
-            font-size: 2.5rem;
-        }
+    @media only screen and (min-width: 600px) {
+      font-size: 1.75rem;
     }
+
+    @media only screen and (min-width: 1200px) {
+      font-size: 2.5rem;
+    }
+  }
 }
 
-input[type=text] {
-    outline: none !important;
+input[type="text"] {
+  outline: none !important;
 }

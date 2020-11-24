@@ -1,57 +1,57 @@
 .Hero {
-    min-height: 125vh;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    color: white;
-    flex-direction: column;
-    
-    h2 {
-        position: relative;
-        margin: 100px auto 0;
-        width: 85%;
-        text-align: center;
+  min-height: 125vh;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  color: white;
+  flex-direction: column;
 
-        @media only screen and (orientation: portrait) {
-            margin: 70px auto 0;
-        }
+  h2 {
+    position: relative;
+    margin: 100px auto 0;
+    width: 85%;
+    text-align: center;
 
-        @media only screen and (min-width: 600px) {
-            width: 65%;
-        }
-
-        @media only screen and (min-width: 980px) {
-            width: 90%;
-            margin: 240px auto 0;
-        }
-
-        @media only screen and (min-width: 1440px) {
-            margin: 340px auto 0;
-        }
-    }
-    
-    img {
-        position: absolute;
-        width: 80%;
-        left: 53%;
-        top: 50%;
-        transform: translate3d(-50%, -103%, 0);
-
-        @media only screen and (orientation: portrait) {
-            width: 90%;
-            transform: translate3d(-50%, -163%, 0);
-        }
-
-        @media only screen and (min-width: 1440px) {
-            transform: translate3d(-50%, -90%, 0);
-        }
+    @media only screen and (orientation: portrait) {
+      margin: 70px auto 0;
     }
 
-    .scrollIndicator {
-        position: absolute;
-        top: 100vh;
-        left: 50%;
-        transform: translate3d(-50%, -100px, 0);
-        width: 100px;
+    @media only screen and (min-width: 600px) {
+      width: 65%;
     }
+
+    @media only screen and (min-width: 980px) {
+      width: 90%;
+      margin: 240px auto 0;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      margin: 340px auto 0;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 80%;
+    left: 53%;
+    top: 50%;
+    transform: translate3d(-50%, -103%, 0);
+
+    @media only screen and (orientation: portrait) {
+      width: 90%;
+      transform: translate3d(-50%, -163%, 0);
+    }
+
+    @media only screen and (min-width: 1440px) {
+      transform: translate3d(-50%, -90%, 0);
+    }
+  }
+
+  .scrollIndicator {
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+    transform: translate3d(-50%, -100px, 0);
+    width: 100px;
+  }
 }
