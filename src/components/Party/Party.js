@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Party.css";
-import Kuula from "../Kuula";
+// import Kuula from "../Kuula";
 
 const Party = () => {
   return (
     <section className="Party -fullbleed">
-      <Kuula />
+      Party
+      {/* <Kuula /> */}
     </section>
   );
 };

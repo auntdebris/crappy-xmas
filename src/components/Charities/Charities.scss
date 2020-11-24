@@ -1,37 +1,24 @@
 .Charities {
-  padding: 120px 0;
-  background: #f2f2f2;
-  color: #031b2b;
-
   ul {
-    display: flex;
-    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style-type: none;
     width: 100%;
     max-width: 1200px;
-    text-align: center;
     justify-content: center;
   }
 
   li {
-    flex: 0 auto;
+    display: block;
     width: 100%;
-    margin: 40px 0;
-  }
+    margin: 0 0 100px;
 
-  li img {
-    width: 150px;
-  }
+    @media only screen and (min-width: 760px) {
+      margin: 0 0 150px;
+    }
 
-  li p {
-    margin: 5px 0 30px;
-  }
-
-  @media only screen and (min-width: 720px) {
-    li {
-      width: 33.333%;
+    @media only screen and (min-width: 980px) {
+      margin: 0 0 200px;
     }
   }
 }
