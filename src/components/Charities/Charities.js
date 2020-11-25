@@ -1,48 +1,20 @@
 import React from "react";
-import './Charities.css';
+import "./Charities.scss";
+import Charity from "../Charity";
+import charities from "./data";
 
-const Charities = () => {
-    return (
-        <section className="Charities -fullbleed -centerContent">
-            <ul>
-                <li>
-                    <article>
-                        <img src={`${process.env.PUBLIC_URL}/images/logo-crisis.png`} alt="Crisis" />
-                        <p className="-large">Crisis</p>
-                        <a href="/" className="button -red">Donate</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <img src={`${process.env.PUBLIC_URL}/images/logo-firstlove.png`} alt="Crisis" />
-                        <p className="-large">First Love Foundation</p>
-                        <a href="/" className="button -red">Donate</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <img src={`${process.env.PUBLIC_URL}/images/logo-mind.png`} alt="Crisis" />
-                        <p className="-large">MIND</p>
-                        <a href="/" className="button -red">Donate</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <img src={`${process.env.PUBLIC_URL}/images/logo-wlt.png`} alt="Crisis" />
-                        <p className="-large">World Land Trust</p>
-                        <a href="/" className="button -red">Donate</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <img src={`${process.env.PUBLIC_URL}/images/logo-wme.png`} alt="Crisis" />
-                        <p className="-large">#WeMakeEvents</p>
-                        <a href="/" className="button -red">Donate</a>
-                    </article>
-                </li>
-            </ul>
-        </section>
-    );
-}
+const Charities = () => (
+  <section className="Charities -fullbleed -centerContent">
+    {Array.isArray(charities) && (
+      <ul>
+        {charities.map((charity) => (
+          <li key={charity.id}>
+            <Charity {...charity} />
+          </li>
+        ))}
+      </ul>
+    )}
+  </section>
+);
 
 export default Charities;

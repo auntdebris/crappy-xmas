@@ -1,0 +1,155 @@
+.Party {
+  position: relative;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  @media (orientation: landscape) {
+    min-height: 200vh;
+  }
+
+  @media (orientation: landscape) and (min-width: 760px) and (min-height: 500px) {
+    min-height: 100vh;
+  }
+}
+
+.Party__logo {
+  position: relative;
+  margin: 15vh auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 1400px;
+  padding-right: 30px;
+
+  @media (min-width: 760px) {
+    padding-right: 60px;
+  }
+
+  @media (min-width: 1500px) {
+    padding-right: 0;
+  }
+
+  img {
+    display: inline-block;
+    width: 165px;
+  }
+}
+
+.Party__invite {
+  position: absolute;
+
+  @media (orientation: landscape) {
+    bottom: auto;
+    width: 130%;
+    left: -10%;
+    top: 15%;
+  }
+
+  @media (min-width: 760px) {
+    top: 5%;
+  }
+
+  @media (min-width: 980px) {
+    top: 0;
+  }
+
+  @media (min-width: 760px) and (min-height: 500px) {
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    left: 0;
+  }
+
+  @media (min-width: 1200px) and (min-height: 500px) {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 5%;
+  }
+
+  @media (min-width: 1400px) and (min-height: 500px) {
+    top: auto;
+    bottom: 0;
+  }
+
+  @media (orientation: portrait) {
+    bottom: auto;
+    width: 150%;
+    left: -20%;
+    top: 20%;
+  }
+
+  @media (orientation: portrait) and (min-width: 760px) {
+    top: 20%;
+  }
+
+  @media (orientation: portrait) and (min-height: 760px) {
+    top: 25%;
+  }
+}
+
+.Party__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Party__content-bottom {
+  max-width: 1400px;
+  position: relative;
+  margin: 0 30px;
+  padding-bottom: 40px;
+
+  p {
+    margin: 0;
+  }
+
+  @media (min-width: 760px) {
+    margin: 0 60px;
+  }
+
+  @media (min-width: 980px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: 1500px) {
+    margin: 0 auto;
+    padding-bottom: 80px;
+  }
+}
+
+.Party__text {
+  color: white;
+
+  @media (min-width: 980px) {
+    flex: 0 0 70%;
+  }
+
+  @media (min-width: 1200px) {
+    flex: 0 0 60%;
+  }
+}
+
+.Party__cta {
+  margin-top: 30px;
+
+  @media (min-width: 980px) {
+    text-align: right;
+    margin-top: 0;
+    flex: 0 0 30%;
+  }
+
+  @media (min-width: 1200px) {
+    flex: 0 0 35%;
+  }
+}

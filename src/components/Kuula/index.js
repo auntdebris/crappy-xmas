@@ -1,2 +1,2 @@
-import Kuula from './Kuula';
+import Kuula from "./Kuula";
 export default Kuula;

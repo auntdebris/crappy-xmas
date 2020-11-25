@@ -1,2 +1,2 @@
-import Charities from './Charities';
+import Charities from "./Charities";
 export default Charities;

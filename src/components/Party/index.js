@@ -1,2 +1,2 @@
-import Party from './Party';
+import Party from "./Party";
 export default Party;
