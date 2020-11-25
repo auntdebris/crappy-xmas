@@ -22,7 +22,6 @@ const Charity = ({ id, name, alt, text, url }) => (
         className="img"
         src={`${process.env.PUBLIC_URL}/assets/img-${id}.jpg`}
         alt={alt}
-        role="presentation"
       />
     </section>
   </article>
