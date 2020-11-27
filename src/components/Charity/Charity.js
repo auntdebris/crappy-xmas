@@ -12,7 +12,7 @@ const Charity = ({ id, name, alt, text, url }) => (
       </div>
     </section>
     <section>
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" rel="noopener noreferrer">
         <div className="logo">
           <img
             className="-lazy"
