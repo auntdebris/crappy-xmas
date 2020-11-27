@@ -4,55 +4,91 @@
   background-position: top center;
   background-repeat: no-repeat;
   color: white;
-  flex-direction: column;
 
-  h2 {
-    position: relative;
-    margin: 100px auto 0;
-    width: 85%;
-    text-align: center;
+  > div {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    @media only screen and (orientation: portrait) {
-      margin: 70px auto 0;
+  @media only screen and (max-height: 600px) {
+    min-height: 145vh;
+
+    > div {
+      min-height: 120vh;
+    }
+  }
+}
+
+.Hero__text {
+  position: relative;
+  margin: 10vh auto 0;
+  width: 85%;
+  text-align: center;
+
+  @media only screen and (min-width: 600px) {
+    width: 65%;
+  }
+
+  @media only screen and (min-width: 980px) {
+    width: 90%;
+  }
+
+  @media only screen and (min-width: 1440px) {
+  }
+}
+
+.Hero__logo {
+  position: relative;
+  max-width: 375px;
+  width: 90%;
+
+  &.-portrait {
+    display: none;
+  }
+
+  @media only screen and (orientation: portrait) {
+    &.-landscape {
+      display: none;
     }
 
-    @media only screen and (min-width: 600px) {
-      width: 65%;
-    }
-
-    @media only screen and (min-width: 980px) {
-      width: 90%;
-      margin: 240px auto 0;
-    }
-
-    @media only screen and (min-width: 1440px) {
-      margin: 340px auto 0;
+    &.-portrait {
+      display: block;
     }
   }
 
-  img {
-    position: absolute;
+  @media only screen and (min-width: 768px) {
+    max-width: 600px;
+  }
+
+  @media only screen and (min-width: 1440px) {
     max-width: 1400px;
-    width: 80%;
-    left: 53%;
-    top: 50%;
-    transform: translate3d(-50%, -103%, 0);
-
-    @media only screen and (orientation: portrait) {
-      width: 90%;
-      transform: translate3d(-50%, -163%, 0);
-    }
-
-    @media only screen and (min-width: 1440px) {
-      transform: translate3d(-50%, -90%, 0);
-    }
   }
 
-  .scrollIndicator {
-    position: absolute;
-    top: 100vh;
-    left: 50%;
-    transform: translate3d(-50%, -100px, 0);
-    width: 80px;
+  @media only screen and (orientation: landscape) and (max-width: 767px) {
+    max-width: 400px;
+  }
+
+  @media only screen and (orientation: landscape) and (max-width: 1200px) {
+    max-width: 900px;
+  }
+
+  @media only screen and (orientation: landscape) and (max-height: 600px) {
+    max-width: 375px;
+  }
+}
+
+.Hero__scrollIndicator {
+  margin-top: 20vh;
+  width: 80px;
+
+  @media only screen and (orientation: landscape) and (max-width: 767px) {
+    margin-top: 10vh;
+  }
+
+  @media only screen and (max-height: 600px) {
+    width: 60px;
+    margin-top: 8vh;
   }
 }
