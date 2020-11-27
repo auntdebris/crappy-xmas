@@ -21,7 +21,7 @@ input[type="text"] {
 button,
 .button {
   font-family: "futura-pt", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.777778px;
   text-decoration: none;
@@ -80,7 +80,7 @@ button,
 
 h2 {
   font-family: futura-pt, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 400;
 
   @media only screen and (min-width: 768px) and (orientation: portrait) {
@@ -94,7 +94,7 @@ h2 {
 
 p {
   &.-medium {
-    font-size: 1rem;
+    font-size: 1.1rem;
 
     @media only screen and (min-width: 600px) {
       font-size: 1.25rem;
