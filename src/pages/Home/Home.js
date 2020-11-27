@@ -7,8 +7,6 @@ import Party from "../../components/Party";
 import Footer from "../../components/Footer";
 import lazyloading from "../../utils/lazyloading";
 
-const NoParty = () => <div />;
-
 const Home = () => {
   const nowDate = Date.now();
   const partyDate = new Date(2020, 11, 10, 15, 30);

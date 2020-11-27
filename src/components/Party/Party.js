@@ -35,6 +35,7 @@ const Party = () => {
         <div>
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href="//crappychristmasparty.com"
             className="Party__cta button -lazy"
           >
