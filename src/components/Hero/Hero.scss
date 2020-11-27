@@ -4,9 +4,7 @@
   @include fullbleed();
   @include centerContent();
   min-height: 125vh;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+
   color: white;
 
   @media only screen and (max-height: 600px) {
@@ -27,6 +25,9 @@
   opacity: 0;
   transition: opacity 500ms ease-in-out;
   z-index: -1;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 
   .-loaded & {
     opacity: 1;
