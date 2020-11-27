@@ -1,11 +1,10 @@
 import React from "react";
 import "./Party.scss";
-// import Kuula from "../Kuula";
 
 const Party = () => {
   return (
     <section
-      className="Party -fullbleed"
+      className="Party"
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/hero-bottom.jpg)`,
       }}

@@ -1,33 +1,6 @@
 import React from "react";
 import "./Hero.scss";
-
-const animateScroll = (targetPos, duration) => {
-  const documentBodyElement = document.scrollingElement || document.body;
-  const startPos = documentBodyElement.scrollTop;
-  const posDelta = targetPos - startPos;
-  // Assumes 60 frames per second
-  const totalFrames = duration * 0.06;
-
-  // Robert Penner's easeOutCubic function
-  const easeOutCubic = (currentFrame) => {
-    return (
-      posDelta * (Math.pow(currentFrame / totalFrames - 1, 3) + 1) + startPos
-    );
-  };
-
-  const handleAnimationFrame = (currentFrame) => {
-    if (currentFrame > totalFrames) {
-      return;
-    }
-
-    window.requestAnimationFrame(() => {
-      documentBodyElement.scrollTop = easeOutCubic(currentFrame);
-      handleAnimationFrame(currentFrame + 1);
-    });
-  };
-
-  handleAnimationFrame(0);
-};
+import animateScroll from "../../utils/animateScroll";
 
 const Hero = () => {
   const onImageLoad = (e) => {
@@ -35,13 +8,13 @@ const Hero = () => {
   };
 
   return (
-    <section
-      className="Hero -fullbleed -centerContent"
-      style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/assets/hero.jpg)`,
-      }}
-    >
-      <div>
+    <section className="Hero">
+      <div
+        className="Hero__bg"
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/assets/hero.jpg)`,
+        }}
+      >
         <img
           src={`${process.env.PUBLIC_URL}/assets/hero.jpg`}
           className="-visuallyHidden"
@@ -49,6 +22,8 @@ const Hero = () => {
           role="presentation"
           onLoad={onImageLoad}
         />
+      </div>
+      <div className="Hero__content">
         <img
           className="Hero__logo -landscape"
           src={`${process.env.PUBLIC_URL}/assets/hero-landscape.png`}

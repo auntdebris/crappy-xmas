@@ -4,7 +4,7 @@ import Charity from "../Charity";
 import charities from "./data";
 
 const Charities = () => (
-  <section className="Charities -fullbleed -centerContent">
+  <section className="Charities">
     {Array.isArray(charities) && (
       <ul>
         {charities.map((charity) => (

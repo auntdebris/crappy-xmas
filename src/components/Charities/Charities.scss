@@ -1,4 +1,8 @@
+@import "../../styles/mixins.scss";
+
 .Charities {
+  @include fullbleed();
+
   ul {
     margin: 0;
     padding: 0;

@@ -3,8 +3,8 @@ import "./Intro.scss";
 
 const Intro = () => {
   return (
-    <section className="Intro -fullbleed -centerContent -lazy">
-      <div className="Intro__content">
+    <section className="Intro">
+      <div className="Intro__content -lazy">
         <p className="-large">
           This year, in addition to donating the money we would have spent on
           our company Christmas party, we are offering everyone the opportunity

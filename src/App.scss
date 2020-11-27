@@ -21,6 +21,7 @@ input[type="text"] {
 .-lazy {
   min-height: 1px;
 }
+
 button {
   appearance: none;
   background: none;
@@ -48,11 +49,11 @@ button {
     border-radius: 62px;
     padding: 7px 40px !important;
     line-height: 1.7em;
-    background: #f9f5f1 !important;
+    background: white !important;
 
     &.-red {
       background: #fe414d !important;
-      color: #f9f5f1 !important;
+      color: white !important;
     }
   }
 
@@ -67,18 +68,6 @@ button {
   @media only screen and (min-width: 1200px) {
     font-size: 2rem;
   }
-}
-
-.-fullbleed {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-}
-
-.-centerContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .-visuallyHidden {
