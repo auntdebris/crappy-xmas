@@ -2,6 +2,14 @@
   flex-direction: column;
   min-height: 70vh;
   padding: 0 0 80px;
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+  transition: opacity 500ms ease-in-out 50ms, transform 500ms ease-in-out 50ms;
+
+  &.-visible {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 
   @media only screen and (min-width: 600px) {
     padding: 0 0 120px;
@@ -9,7 +17,7 @@
 }
 
 .Intro__content {
-  width: 70%;
-  max-width: 1000px;
+  width: 75%;
+  max-width: 1120px;
   text-align: center;
 }

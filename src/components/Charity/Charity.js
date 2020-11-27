@@ -2,7 +2,7 @@ import React from "react";
 import "./Charity.scss";
 
 const Charity = ({ id, name, alt, text, url }) => (
-  <article className="Charity">
+  <article className="Charity -lazy">
     <section>
       <p className="-medium">{text}</p>
       <div>
@@ -14,13 +14,14 @@ const Charity = ({ id, name, alt, text, url }) => (
     <section>
       <div className="logo">
         <img
-          src={`${process.env.PUBLIC_URL}/assets/logo-${id}.png`}
+          className="-lazy"
+          data-src={`${process.env.PUBLIC_URL}/assets/logo-${id}.png`}
           alt={name}
         />
       </div>
       <img
-        className="img"
-        src={`${process.env.PUBLIC_URL}/assets/img-${id}.jpg`}
+        className="-lazy img"
+        data-src={`${process.env.PUBLIC_URL}/assets/img-${id}.jpg`}
         alt={alt}
       />
     </section>
