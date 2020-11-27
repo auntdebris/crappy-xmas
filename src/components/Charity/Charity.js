@@ -6,7 +6,12 @@ const Charity = ({ id, name, alt, text, url }) => (
     <section>
       <p className="-medium">{text}</p>
       <div>
-        <a href={url} className="button -red" target="_blank">
+        <a
+          href={url}
+          className="button -red"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Donate now
         </a>
       </div>
