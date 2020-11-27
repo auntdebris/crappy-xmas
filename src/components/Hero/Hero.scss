@@ -4,6 +4,12 @@
   background-position: top center;
   background-repeat: no-repeat;
   color: white;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+
+  &.-loaded {
+    opacity: 1;
+  }
 
   > div {
     min-height: 100vh;
@@ -87,6 +93,10 @@
 .Hero__scrollIndicator {
   margin-top: 12vh;
   width: 80px;
+
+  img {
+    max-width: 100%;
+  }
 
   @media only screen and (orientation: landscape) and (max-width: 767px) {
     margin-top: 10vh;

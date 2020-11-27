@@ -10,18 +10,16 @@ const Party = () => {
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/hero-bottom.jpg)`,
       }}
     >
-      {/* <div className="Party__content"> */}
-      {/* <div className="Party__content-top"> */}
       <div className="Party__logoPS">
         <img
-          src={`${process.env.PUBLIC_URL}/assets/logo-ps.png`}
+          className="-lazy"
+          data-src={`${process.env.PUBLIC_URL}/assets/logo-ps.png`}
           alt="Publicis Sapient"
         />
       </div>
-      {/* </div> */}
       <img
-        className="Party__invite"
-        src={`${process.env.PUBLIC_URL}/assets/xmas-tag.png`}
+        className="Party__invite -lazy"
+        data-src={`${process.env.PUBLIC_URL}/assets/xmas-tag.png`}
         alt="You're invited to our crappy Christmas Party. From: Scott"
       />
       <div className="Party__text">
@@ -36,7 +34,7 @@ const Party = () => {
           </p>
         </div>
         <div>
-          <a href="/" className="Party__cta button -red">
+          <a href="/" className="Party__cta button">
             Take me to the party
           </a>
         </div>
