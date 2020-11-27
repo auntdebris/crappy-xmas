@@ -6,24 +6,26 @@ const Charity = ({ id, name, alt, text, url }) => (
     <section>
       <p className="-medium">{text}</p>
       <div>
-        <a href={url} className="button -red">
+        <a href={url} className="button -red" target="_blank">
           Donate now
         </a>
       </div>
     </section>
     <section>
-      <div className="logo">
+      <a href={url} target="_blank">
+        <div className="logo">
+          <img
+            className="-lazy"
+            data-src={`${process.env.PUBLIC_URL}/assets/logo-${id}.png`}
+            alt={name}
+          />
+        </div>
         <img
-          className="-lazy"
-          data-src={`${process.env.PUBLIC_URL}/assets/logo-${id}.png`}
-          alt={name}
+          className="-lazy img"
+          data-src={`${process.env.PUBLIC_URL}/assets/img-${id}.jpg`}
+          alt={alt}
         />
-      </div>
-      <img
-        className="-lazy img"
-        data-src={`${process.env.PUBLIC_URL}/assets/img-${id}.jpg`}
-        alt={alt}
-      />
+      </a>
     </section>
   </article>
 );

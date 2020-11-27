@@ -1,16 +1,15 @@
 import React from "react";
 import "./Party.scss";
-// import Kuula from "../Kuula";
 
 const Party = () => {
   return (
     <section
-      className="Party -fullbleed"
+      className="Party"
       style={{
         backgroundImage: `url(${process.env.PUBLIC_URL}/assets/hero-bottom.jpg)`,
       }}
     >
-      <div className="Party__logoPS">
+      <div className="Party__logoPS -lazy">
         <img
           className="-lazy"
           data-src={`${process.env.PUBLIC_URL}/assets/logo-ps.png`}
@@ -19,10 +18,10 @@ const Party = () => {
       </div>
       <img
         className="Party__invite -lazy"
-        data-src={`${process.env.PUBLIC_URL}/assets/xmas-tag.png`}
+        data-src={`${process.env.PUBLIC_URL}/assets/xmas-tag-tape.png`}
         alt="You're invited to our crappy Christmas Party. From: Scott"
       />
-      <div className="Party__text">
+      <div className="Party__text -lazy">
         <div>
           <p className="-large">
             <strong>Not visited yet?</strong>
@@ -34,7 +33,11 @@ const Party = () => {
           </p>
         </div>
         <div>
-          <a href="/" className="Party__cta button">
+          <a
+            target="_blank"
+            href="//crappychristmasparty.com"
+            className="Party__cta button -lazy"
+          >
             Take me to the party
           </a>
         </div>

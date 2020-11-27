@@ -1,51 +1,57 @@
+@import "../../styles/mixins.scss";
+
 .Hero {
+  @include fullbleed();
+  @include centerContent();
   min-height: 125vh;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   color: white;
-  opacity: 0;
-  transition: opacity 500ms ease-in-out;
-
-  &.-loaded {
-    opacity: 1;
-  }
-
-  > div {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   @media only screen and (max-height: 600px) {
     min-height: 145vh;
 
-    > div {
+    .Hero__content {
       min-height: 120vh;
     }
   }
 }
 
-.Hero__text {
-  position: relative;
-  margin: 10vh auto 0;
-  width: 85%;
-  text-align: center;
+.Hero__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  z-index: -1;
 
-  @media only screen and (min-width: 600px) {
-    width: 65%;
+  .-loaded & {
+    opacity: 1;
   }
+}
 
-  @media only screen and (min-width: 980px) {
-    width: 90%;
-  }
+.Hero__content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Hero__logo {
   position: relative;
   max-width: 375px;
   width: 90%;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 500ms ease-in-out 500ms, transform 500ms ease-in-out 500ms;
+
+  .-loaded & {
+    transform: none;
+    opacity: 1;
+  }
 
   &.-portrait {
     display: none;
@@ -90,9 +96,40 @@
   }
 }
 
+.Hero__text {
+  position: relative;
+  margin: 10vh auto 0;
+  width: 85%;
+  text-align: center;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 500ms ease-in-out 600ms, transform 500ms ease-in-out 600ms;
+
+  .-loaded & {
+    transform: none;
+    opacity: 1;
+  }
+
+  @media only screen and (min-width: 600px) {
+    width: 65%;
+  }
+
+  @media only screen and (min-width: 980px) {
+    width: 90%;
+  }
+}
+
 .Hero__scrollIndicator {
   margin-top: 12vh;
   width: 80px;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  transition: opacity 500ms ease-in-out 700ms, transform 500ms ease-in-out 700ms;
+
+  .-loaded & {
+    transform: none;
+    opacity: 1;
+  }
 
   img {
     max-width: 100%;
