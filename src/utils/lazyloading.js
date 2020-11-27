@@ -30,7 +30,6 @@ const lazyloading = () => {
   const onImgChange = (changes) => {
     changes.forEach((change) => {
       if (change.intersectionRatio > 0) {
-        change.target.classList.add(visibleClass);
         change.target.src = change.target.getAttribute("data-src");
         imgObserver.unobserve(change.target);
       }

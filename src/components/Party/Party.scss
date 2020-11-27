@@ -16,6 +16,12 @@
   max-width: 1400px;
   padding-right: 30px;
   text-align: right;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out 250ms;
+
+  &.-visible {
+    opacity: 1;
+  }
 
   @media (min-width: 760px) {
     padding-right: 60px;
@@ -45,12 +51,9 @@
   width: 140%;
   margin-left: -15%;
   opacity: 0;
-  transform: translate3d(-25px, -5px, 0);
-  transform-origin: 0 0;
-  transition: opacity 500ms ease-in-out 250ms, transform 500ms ease-in-out 250ms;
+  transition: opacity 500ms ease-in-out 250ms;
 
   &.-visible {
-    transform: translate3d(0, 0, 0) rotate(0deg);
     opacity: 1;
   }
 
@@ -69,6 +72,12 @@
   margin: 5vh 30px 0;
   padding-bottom: 40px;
   color: white;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out 250ms;
+
+  &.-visible {
+    opacity: 1;
+  }
 
   p {
     margin: 0;
@@ -108,4 +117,10 @@
 .Party__cta {
   margin-top: 30px;
   color: #920e11;
+  opacity: 0;
+  transition: opacity 500ms ease-in-out 250ms;
+
+  &.-visible {
+    opacity: 1;
+  }
 }
