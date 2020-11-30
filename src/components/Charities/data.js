@@ -4,7 +4,7 @@ const charities = [
     name: "First Love Foundation",
     text:
       "We believe no-one should face crisis alone. The pandemic has seen demand for our advice and foodbank services soar by 900% and the upcoming festive period will only see that rise even more. Just £35 will provide Christmas dinner for an individual or £60 for a family. Whatever you can give will help kids and adults in Tower Hamlets to have a better end to this year.",
-    url: "https://firstlovefoundation.enthuse.com/profile",
+    url: "https://firstlovefoundation.enthuse.com/cf/winter-fundraiser-2020",
     alt: "People at foodbank.",
   },
   {
